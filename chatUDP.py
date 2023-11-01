@@ -2,14 +2,13 @@ import socket
 import threading
  
 # Endereço IP e porta para o servidor
-host = '10.113.60.230'  # Endereço IP do servidor
+host = '10.113.60.202'  # Endereço IP do servidor
 porta = 12345  # Porta do servidor
  
 # Cria um objeto socket UDP
 socket_server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
  
-# Liga o socket ao endereço e porta especificados
-socket_server.bind((host, porta))
+# Liga o socket ao endereço e porta especificados 
 
 # Tamanho máximo de dados a serem recebidos de uma vez
 tamanho_maximo = 1024
