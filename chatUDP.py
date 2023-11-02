@@ -2,8 +2,8 @@ import socket
 import threading
  
 # Endereço IP e porta para o servidor
-host = '10.113.50.239'  # Endereço IP do servidor
-porta = 12345  # Porta do servidor
+host = '192.168.10.108'  # Endereço IP do servidor
+porta = 12346  # Porta do servidor
  
 # Cria um objeto socket UDP
 socket_server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

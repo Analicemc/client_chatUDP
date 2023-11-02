@@ -2,14 +2,14 @@ import socket
 import threading
 
 # Endereço IP e porta do servidor
-host = '10.113.50.239'  # Endereço IP do servidor
+host = '192.168.10.109'  # Endereço IP do servidor
 porta = 12345  # Porta do servidor
 
 # Tamanho máximo de dados a serem recebidos de uma vez
 tamanho_maximo = 1024
 
 # Lista de contatos simulada (nome, endereço IP)
-contatos = [("Rangerson", "10.113.50.237:12345"), ("Alisson", "10.113.50.240:12345")]
+contatos = []
 
 # Função para receber mensagens do servidor
 def receber_mensagens(socket_cliente):
@@ -43,7 +43,7 @@ def exibir_lista_contatos():
 
 # Configuração do cliente UDP
 socket_cliente = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-socket_cliente.bind(('0.0.0.0', 0))  # Associa o cliente a uma porta local aleatória
+socket_cliente.bind((host, porta))  # Associa o cliente a uma porta
 
 # Inicializa threads para receber e enviar mensagens
 thread_recebimento = threading.Thread(target=receber_mensagens, args=(socket_cliente,))
